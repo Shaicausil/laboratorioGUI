@@ -31,7 +31,7 @@ public class VentanaConsultaIndividual extends JDialog implements ActionListener
          * que es hija*/
         super(ventanaPrincipal, modal);
         setTitle("Ventana Registro Persona");
-        setSize(370, 277);
+        setSize(400, 300);
         getContentPane().setLayout(null);
         setLocationRelativeTo(null);
 
