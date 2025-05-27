@@ -40,7 +40,7 @@ public class VentanaConsultarLista extends JDialog implements ActionListener{
          * JFrame Padre y la propiedad booleana que determina
          * que es hija*/
         super(ventanaPrincipal, modal);
-        setBounds(100, 100, 453, 327);
+        setBounds(100, 100, 500, 327);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
