@@ -32,7 +32,7 @@ public class VentanaRegistro extends JDialog implements ActionListener{
          * que es hija*/
         super(ventanaPrincipal, modal);
         setTitle("Ventana Registro Persona");
-        setSize(382, 277);
+        setSize(400, 277);
         getContentPane().setLayout(null);
         setLocationRelativeTo(null);
 
