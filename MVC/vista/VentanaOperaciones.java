@@ -21,23 +21,22 @@ public class VentanaOperaciones extends JDialog implements ActionListener {
         setLocationRelativeTo(null);
         setLayout(new GridLayout(6, 1, 5, 5));
 
-        // Campos para números
+        
         txtNumero1 = new JTextField();
         txtNumero2 = new JTextField();
 
-        // Combo con las operaciones
         String[] operaciones = {"suma", "resta", "multiplicacion", "division"};
         comboOperacion = new JComboBox<>(operaciones);
 
-        // Botones
+       
         btnCalcular = new JButton("Calcular");
         btnCerrar = new JButton("Cerrar");
 
-        // Label resultado
+   
         lblResultado = new JLabel("Resultado: ");
         lblResultado.setHorizontalAlignment(SwingConstants.CENTER);
 
-        // Añadir componentes al diálogo
+    
         add(new JLabel("Número 1:"));
         add(txtNumero1);
         add(new JLabel("Número 2:"));
@@ -47,7 +46,7 @@ public class VentanaOperaciones extends JDialog implements ActionListener {
         add(lblResultado);
         add(btnCerrar);
 
-        // Acción botones
+ 
         btnCalcular.addActionListener(this);
         btnCerrar.addActionListener(this);
     }
@@ -59,7 +58,6 @@ public class VentanaOperaciones extends JDialog implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == btnCalcular) {
-            // Validar datos
             String num1 = txtNumero1.getText().trim();
             String num2 = txtNumero2.getText().trim();
             String operacion = (String) comboOperacion.getSelectedItem();
@@ -69,7 +67,6 @@ public class VentanaOperaciones extends JDialog implements ActionListener {
                 return;
             }
 
-            // Calcular operación
             String resultado = coordinador.calcularOperacion(operacion, num1, num2);
             lblResultado.setText("Resultado: " + resultado);
 
